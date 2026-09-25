@@ -1,0 +1,8 @@
+test_id,email,password,expected
+valid_credentials,gwen09781@gmail.com,JY2VQ@gccavWCa,success
+unregistered_email,wrong_user@example.com,wrongpass,failure
+empty_email_and_password,,,failure
+valid_email_wrong_password,{gwen09781@gmail.com},badpassword,failure
+empty_email_valid_password,,JY2VQ@gccavWCa,failure
+email_without_at_symbol,abc.example.com,123456,failure
+sql_injection_in_email,' OR '1'='1,anything,failure

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Automation Test Report</title>
+<style>
+  html,body{height:100%;margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f6f8}
+  header{background:#1f2937;color:#fff;padding:12px 20px;display:flex;align-items:center;gap:24px}
+  header h1{font-size:18px;margin:0;font-weight:600}
+  .tabs button{background:#374151;color:#fff;border:0;padding:10px 20px;margin-right:6px;
+               border-radius:6px 6px 0 0;cursor:pointer;font-size:14px}
+  .tabs button.active{background:#fff;color:#111827;font-weight:600}
+  .open{margin-left:auto;font-size:13px} .open a{color:#93c5fd}
+  .panel{display:none;height:calc(100% - 58px)} .panel.active{display:block}
+  iframe{width:100%;height:100%;border:0;background:#fff}
+</style></head><body>
+<header>
+  <h1>Selenium Framework - Test Report</h1>
+  <div class="tabs">
+    <button id="b1" class="active" onclick="show(1)">PyTest Report</button>
+    <button id="b2" onclick="show(2)">Unittest Report</button>
+  </div>
+  <div class="open"><a href="report.html" target="_blank">open PyTest report in new tab</a> |
+       <a href="unittest_report.html" target="_blank">open Unittest report in new tab</a></div>
+</header>
+<div id="p1" class="panel active"><iframe src="report.html"></iframe></div>
+<div id="p2" class="panel"><iframe src="unittest_report.html"></iframe></div>
+<script>
+function show(n){
+  for (const i of [1,2]) {
+    document.getElementById('p'+i).classList.toggle('active', i===n);
+    document.getElementById('b'+i).classList.toggle('active', i===n);
+  }
+}
+</script></body></html>

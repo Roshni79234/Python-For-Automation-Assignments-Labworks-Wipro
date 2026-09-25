@@ -1,0 +1,11 @@
+test_id,keyword,expected
+iphone,iPhone,found
+macbook,MacBook,found
+samsung,Samsung,found
+canon,Canon,found
+partial_keyword,Mac,found
+uppercase_keyword,IPHONE,found
+nonexistent_product,xyzabc123,not_found
+special_characters,@#$%^&,not_found
+numeric_only,99999999,not_found
+empty_keyword,,not_found
